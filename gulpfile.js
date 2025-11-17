@@ -9,58 +9,54 @@ const rename = require('gulp-rename');
 const uglify = require('gulp-uglify');
 const imagemin = require('gulp-imagemin');
 const browserSync = require('browser-sync').create();
+
 // html task
 const html_task = () => src('app/*.html')
-    .pipe(file_include({
-        prefix: '@@',
-        basepath: '@file'
-    }))
-    .pipe(dest('dist'))
-    .pipe(browserSync.stream());
-//js task
-const js_task = () => src('app/js/*.js')
-    .pipe(concat('script.min.js'))
-    //.pipe(uglify())
-    .pipe(dest('dist/js'));
+  .pipe(file_include({ prefix: '@@', basepath: '@file' }))
+  .pipe(dest('dist'))
+  .pipe(browserSync.stream());
 
-//scss task
+// js task
+const js_task = () => src('app/js/*.js')
+  .pipe(concat('script.min.js'))
+  // .pipe(uglify())
+  .pipe(dest('dist/js'));
+
+// scss task
 const scss_task = () => {
-    return src('app/scss/*.scss') // Select all SCSS files
-        .pipe(sass().on('error', sass.logError)) // Compile SCSS to CSS, handle errors
-        .pipe(cssnano()) // Minify CSS
-        .pipe(rename({suffix: '.min'})) // Add .min suffix to the output file
-        .pipe(dest('dist/css')) // Output to 'dist/css' folder
-        .pipe(browserSync.stream()); // Reload BrowserSync
+  return src('app/scss/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(cssnano())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(dest('dist/css'))
+    .pipe(browserSync.stream());
 };
-//img task
+
+// img task
 const img_task = () => src('app/img/*.+(jpg|jpeg|svg|png|gif)', {encoding: false})
-    .pipe(imagemin({
-        progressive: true,
-        svgoPlugins: [{removeViewBox: false}],
-        interlaced: true
-    }))
-    .pipe(dest('dist/img'))
+  .pipe(imagemin({
+    progressive: true,
+    svgoPlugins: [{removeViewBox: false}],
+    interlaced: true
+  }))
+  .pipe(dest('dist/img'));
+
 // BrowserSync task
-const browserSync_task = () => browserSync.init(
-    {
-        server: {
-            baseDir: './dist'
-        }
-    });
+const browserSync_task = () => browserSync.init({ server: { baseDir: './dist' } });
 
 // json task
 const json_task = () => src('app/data/*.json')
-    .pipe(dest('dist/data'))
-    .pipe(browserSync.stream());
+  .pipe(dest('dist/data'))
+  .pipe(browserSync.stream());
 
-//watch task
+// watch task
 const watch_task = () => {
-    browserSync_task();
-    watch('app/*.html', parallel(html_task));
-    watch('app/scss/*.scss', parallel(scss_task));
-    watch('app/js/*.js', parallel(js_task));
-    watch('app/data/*.json', parallel(json_task));
-    watch('app/img/*.+(jpg|jpeg|png|gif', img_task);
+  browserSync_task();
+  watch('app/*.html', parallel(html_task));
+  watch('app/scss/*.scss', parallel(scss_task));
+  watch('app/js/*.js', parallel(js_task));
+  watch('app/data/*.json', parallel(json_task));
+  watch('app/img/*.+(jpg|jpeg|png|gif)', img_task); // FIX: додана закривальна дужка
 }
 
 // Bootstrap CSS
@@ -77,4 +73,16 @@ const bootstrap_js = () => {
     .pipe(browserSync.stream());
 };
 
-exports.default = series(html_task, scss_task,json_task, img_task, watch_task, js_task);
+// default build
+exports.default = series(
+  html_task,
+  scss_task,
+  json_task,
+  img_task,
+  bootstrap_css,   // FIX: додаємо у пайплайн
+  bootstrap_js,    // FIX: додаємо у пайплайн
+  js_task,
+  watch_task
+);
+exports.bootstrap_css = bootstrap_css;
+exports.bootstrap_js  = bootstrap_js;

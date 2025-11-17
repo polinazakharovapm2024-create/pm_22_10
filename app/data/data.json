@@ -1,0 +1,18 @@
+{
+  "experience": [
+    {
+      "jobPosition": "Data Scientist",
+      "period": "2024-2025",
+      "company": "Software Solutions",
+      "location": "Lviv",
+      "description": "Implemented server-side logic and databases."
+    },
+    {
+      "jobPosition": "Front-End Developer",
+      "period": "2022-2024",
+      "company": "epam",
+      "location": "Lviv",
+      "description": "Created and maintained responsive web interfaces."
+    }
+  ]
+}
