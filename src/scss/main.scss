@@ -1,0 +1,11 @@
+@use "./variables";
+@use "./mixins";
+@use "./base";
+@use "./layout";
+@use "../components/header/_header";
+@use "../components/education/_education";
+@use "../components/experience/_experience";
+@use "../components/expertise/_expertise";
+@use "../components/about/_about";
+@use "../components/contact/_contact";
+@use "../components/hobbies/_hobbies";

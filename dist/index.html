@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /><link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+  <body class="cv-body">
+    <div class="container cv-page">
+      <div
+        id="dataError"
+        class="alert alert-warning d-none"
+        role="alert"
+      ></div>
+
+      <section class="cv-header">
+  <div class="cv-header__inner">
+    <div class="cv-header__left">
+      <h1 class="cv-header__name">
+        <span
+          id="personFirstName"
+          class="cv-header__name-first"
+        >
+        </span>
+        <span
+          id="personLastName"
+          class="cv-header__name-last"
+        >  
+        </span>
+      </h1>
+      <p
+        id="personRole"
+        class="cv-header__role"
+      >
+      </p>
+    </div>
+
+    <div class="cv-header__right">
+      <div class="cv-header__yellow"></div>
+
+      <div class="cv-header__photo-wrapper">
+        <img
+          src="imgs/profile.jpeg"
+          alt="Profile photo"
+          class="cv-header__photo"
+        />
+
+        <span class="cv-header__line cv-header__line--left-dark"></span>
+        <span class="cv-header__line cv-header__line--middle-yellow"></span>
+        <span class="cv-header__line cv-header__line--bottom-white"></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <main class="cv-main">
+        <div class="row g-0">
+          <section class="col-md-8 cv-main__left">
+            <section class="cv-section cv-section--dark cv-section--education">
+  <div class="cv-section__header cv-section__header--with-toggle">
+    <h2 class="cv-section__title">EDUCATION</h2>
+    <button
+      class="btn btn-sm btn-outline-light toggle-btn"
+      type="button"
+      data-target="educationContent"
+    >
+      <span class="toggle-icon">▼</span>
+    </button>
+  </div>
+
+  <div id="educationContent" class="cv-section__content toggle-content">
+    <div class="cv-education">
+      <div class="cv-education__item">
+        <h3 class="cv-education__degree">ENTER YOUR MAJOR</h3>
+        <p class="cv-education__school">Name Of Your University</p>
+        <span class="cv-education__period">2005 - 2009</span>
+      </div>
+
+      <div class="cv-education__item">
+        <h3 class="cv-education__degree">ENTER YOUR MAJOR</h3>
+        <p class="cv-education__school">Name Of Your University</p>
+        <span class="cv-education__period">2009 - 2011</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+            <section class="cv-section cv-section--dark cv-section--experience">
+  <div class="cv-section__header">
+    <h2 class="cv-section__title">EXPERIENCE</h2>
+    <button
+      class="toggle-btn"
+      type="button"
+      data-target="experienceContent"
+    >
+      <span class="toggle-icon">▼</span>
+    </button>
+  </div>
+
+  <div id="experienceContent" class="cv-section__content">
+    <div id="jobsList"></div>
+  </div>
+</section>
+
+            <section class="cv-section cv-section--dark cv-section--expertise">
+  <div class="cv-section__header">
+    <h2 class="cv-section__title">EXPERTISE</h2>
+    <button
+      class="toggle-btn"
+      type="button"
+      data-target="expertiseContent"
+    >
+      <span class="toggle-icon">▼</span>
+    </button>
+  </div>
+
+  <div id="expertiseContent" class="cv-section__content">
+    <ul id="skillsList" class="cv-skills"></ul>
+  </div>
+</section>
+
+          </section>
+
+          <aside class="col-md-4 cv-main__right">
+            <section class="cv-section cv-section--light cv-section--about">
+  <div class="cv-section__header">
+    <h2 class="cv-section__title">ABOUT ME</h2>
+  </div>
+
+  <div class="cv-section__content">
+    <p>
+    Lorem ipsum dolor a
+    consectetur adipiscing elitse elusmod tempor incididunt labore dolore magna aliqua
+    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra maecenas accumsan is 
+    facilisis the dolore magna aliqua dolore magna aliqua dolore magna aliqua.
+    </p>
+  </div>
+</section>
+
+            <section class="cv-section cv-section--light cv-section--contact">
+  <div class="cv-section__header">
+    <h2 class="cv-section__title">CONTACT INFO</h2>
+  </div>
+
+  <div class="cv-section__content">
+    <ul class="cv-contact list-unstyled">
+      <li>
+        <span class="cv-contact__label">PHONE</span>
+        <span class="cv-contact__value">+001 234 567 89</span>
+      </li>
+      <li>
+        <span class="cv-contact__label">EMAIL</span>
+        <span class="cv-contact__value">name@email.com</span>
+      </li>
+      <li>
+        <span class="cv-contact__label">AREA</span>
+        <span class="cv-contact__value">Your Street Address Here</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+            <section class="cv-section cv-section--light cv-section--hobbies">
+  <div class="cv-section__header">
+    <h2 class="cv-section__title">HOBBIES</h2>
+  </div>
+
+  <div class="cv-section__content">
+    <ul class="cv-hobbies">
+      <li class="cv-hobbies__item">
+        <img src="imgs/travel.svg" alt="Travel" class="cv-hobbies__icon" />
+        <span class="cv-hobbies__label">Travel</span>
+      </li>
+
+      <li class="cv-hobbies__item">
+        <img src="imgs/audio.svg" alt="Music" class="cv-hobbies__icon" />
+        <span class="cv-hobbies__label">Music</span>
+      </li>
+
+      <li class="cv-hobbies__item">
+        <img src="imgs/document.svg" alt="Writing" class="cv-hobbies__icon" />
+        <span class="cv-hobbies__label">Writing</span>
+      </li>
+
+      <li class="cv-hobbies__item">
+        <img src="imgs/chess.svg" alt="Chess" class="cv-hobbies__icon" />
+        <span class="cv-hobbies__label">Chess</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+          </aside>
+        </div>
+      </main>
+      <footer class="cv-footer"></footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

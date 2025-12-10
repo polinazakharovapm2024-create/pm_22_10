@@ -1,0 +1,115 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+.cv-section--experience {
+  background-color: $color-dark;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+
+  .cv-section__header {
+    position: relative;
+    display: flex;
+    height: 22px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2e3034; 
+    margin-bottom: $space-unit * 2;
+    padding: 0 24px 0 0;
+
+    h2 {
+      position: relative;
+      font-family: "Bebas Neue", sans-serif;
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      color: #fff;
+      letter-spacing: 0.15rem;
+      padding-left: 85px;
+      padding-right: 11px;
+      display: inline-block;
+      margin-bottom: 0;
+ &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        height: 22px;
+        width: 8px;
+        background-color: $color-yellow; 
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 6px;
+        right: -3px;
+        width: 15px;
+        height: 2px;
+        background-color: $color-yellow; 
+      }
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+      font-size: 0.9rem;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .cv-section__content {
+    padding: 0 24px;
+    margin-bottom: 125px;
+    margin-top: 35px;
+    .cv-experience__item {
+      margin-bottom: 32px;
+      margin-left: 62px;
+      h3 {
+        color: #fff;
+        font-size: 1.25rem;
+        font-weight: 500;
+        font-family: " Open Sans", sans-serif;
+        margin-bottom: 0.9rem;
+        text-transform: none;
+      }
+
+      .cv-meta {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+
+        .cv-period {
+          display: inline-block;
+          background-color: $color-yellow;
+          font-family: "Open Sans", sans-serif;
+          color: #1e1f22;
+          font-weight: 500;
+          border-radius: 4px;
+          padding: 2px 12px 3px;
+          font-size: 0.85rem;
+          letter-spacing: 0.02em;
+        }
+
+        .cv-company {
+          color: #ffff;
+          font-family: "Open Sans", sans-serif;
+        }
+      }
+
+      .cv-description {
+        font-family: "Open Sans",sans-serif;
+        font-size: 0.9rem;
+        color: #fff;
+        line-height: 1.6;
+        max-width: 600px;
+      }
+    }
+  }
+}

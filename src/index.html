@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    /><link
+  href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap"
+  rel="stylesheet"
+/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <title>Resume</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.min.css" />
+  </head>
+  <body class="cv-body">
+    <div class="container cv-page">
+      <div
+        id="dataError"
+        class="alert alert-warning d-none"
+        role="alert"
+      ></div>
+
+      @@include("components/header/header.html")
+
+      <main class="cv-main">
+        <div class="row g-0">
+          <section class="col-md-8 cv-main__left">
+            @@include("components/education/education.html")
+            @@include("components/experience/experience.html")
+            @@include("components/expertise/expertise.html")
+          </section>
+
+          <aside class="col-md-4 cv-main__right">
+            @@include("components/about/about.html")
+            @@include("components/contact/contact.html")
+            @@include("components/hobbies/hobbies.html")
+          </aside>
+        </div>
+      </main>
+      <footer class="cv-footer"></footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+@use "./variables" as *;
+
+.cv-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0;
+  background-color: $color-card-bg;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  &.container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.cv-main__left {
+  background-color: $color-dark;
+  color: #ffffff;
+  width: 59.3%;
+  padding: 32px 0 32px 0;
+  margin-left: 48px;
+}
+
+.cv-main__right {
+  padding: 32px 0 32px 0;
+  width: 35.3%;
+}
+.cv-footer {
+  width: 35.3%;
+  height: 35px;
+  background-color: $color-yellow;
+  margin-top: 0;
+  margin-left: 64.7%;
+}
+
+.toggle-btn {
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-left: $space-unit;
+  color: inherit;
+
+  .toggle-icon {
+    display: inline-block;
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+  }
+
+  .rotated {
+    transform: rotate(180deg);
+  }
+}
+
+.is-hidden {
+  display: none !important;
+}

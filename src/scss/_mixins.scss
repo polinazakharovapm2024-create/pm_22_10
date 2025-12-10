@@ -1,0 +1,37 @@
+@use "sass:math";
+@use "./variables" as *;
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin section-underline($width: 55px, $color: #ffffff) {
+  position: relative;
+  padding-bottom: math.div($space-unit, 2); 
+  margin-bottom: $space-unit * 2;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: $width;
+    height: 2px;
+    background-color: $color;
+  }
+}
+
+
+%cv-section-title {
+  font-size: 0.85rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}

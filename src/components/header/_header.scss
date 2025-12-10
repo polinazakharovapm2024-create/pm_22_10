@@ -1,0 +1,120 @@
+@use "./variables" as *;
+
+.cv-header {
+  position: relative;
+  overflow: hidden;
+  padding: 32px 55px 32px 55px;
+  min-height: 260px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 35.5%; 
+    height: 100%;
+    background-color: $color-yellow;
+    z-index: 0;
+  }
+
+  &__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+  }
+
+  &__left {
+    flex: 0 0 55%;
+  }
+
+  &__right {
+    position: relative;
+    flex: 0 0 45%;
+  }
+
+  &__name {
+    margin: 20px 0 $space-unit;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.1;
+    position: absolute;
+    top:20px;
+  }
+
+  &__name-first {
+    display: block;
+    color: $color-yellow;
+    font-weight: 300;
+  }
+
+  &__name-last {
+    display: block;
+    color: $color-dark;
+    font-weight: 600;
+  }
+
+  &__role {
+    margin: 0 0;
+    font-size: 1.2rem;
+    color: $color-text-muted;
+    letter-spacing: 0.05rem;
+    font-family:$font-role;
+    position: absolute;
+    top:146px;
+  }
+
+
+  &__photo-wrapper {
+    position: absolute;
+    top: 40px;
+    left: 60%;           
+    transform: translateX(-50%);
+    background-color: #f5f5f5; 
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.18);
+    z-index: 2;
+  }
+
+  &__photo {
+    display: block;
+    position: absolute;
+    top:-40px;
+    width: 150px;
+    height: 190px; 
+    position: absolute;
+    right: 34px;
+    z-index: 1;
+  }
+
+  &__line {
+    position: absolute;;
+    height: 3px;
+    z-index: 3;
+
+    &--left-dark {
+      width: 45px;
+      top: -2px;
+      height: 2px;
+      right: 165px;
+      background-color: $color-dark;
+    }
+
+    &--middle-yellow {
+      width: 95px;
+      top: 58px;
+      height: 4px;
+      right: 184px;
+      background-color: $color-yellow;
+    }
+
+    &--bottom-white {
+      width: 110px;
+      top: 118px;
+      height: 4px;
+      right: -20px;
+      background-color: $color-card-bg;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "person": {
+    "firstName": "Michel",
+    "lastName": "Rigaurio",
+    "role": "UI/UX Designer",
+    "photo": "imgs/profile.jpeg"
+  },
+  "skills": [
+      { "name": "Adobe Photoshop", "progress": 85, "offset": 145 },
+      { "name": "Adobe Illustrator", "progress": 80, "offset": 155 },
+      { "name": "Adobe InDesign", "progress": 75, "offset": 180 },
+      { "name": "PowerPoint", "progress": 80, "offset": 155 }
+  ]
+  ,
+  "jobs": [
+    {
+      "position": "Enter Job Position Here",
+      "period": "Present",
+      "company": "Company Name / Location",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    },
+    {
+      "position": "Enter Job Position Here",
+      "period": "2017 - 2019",
+      "company": "Company Name / Location",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+@use "./variables" as *;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: $font-main;
+  background-color: $color-page-bg;
+  color: $color-text-main;
+}
+
+.cv-body {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: $space-unit * 4 0;
+}
